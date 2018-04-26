@@ -7,13 +7,35 @@
 <body>
 	<div class="container">
 		<h1>The Big Picture</h1>
-		<div id="ft">Financial Times</div>
-		<div id="cryptonews">Crypto News</div>
-		<div id="bizinsider">Business Insider</div>
-		<div id="bloomberg">Bloomberg</div>
-		<div id="arstechnica">Ars Technica</div>
+			<div>
+				<div id="ftHead">FT</div>
+					<div id="ft"></div>
+				<hr/>
+				<div id="cryptonewsHead">Crypto News</div>
+					<div id="cryptonews"></div>
+				<hr/>
+				<div id="bizinsiderHead">Business Insider</div>
+					<div id="bizinsider"></div>
+				<hr/>
+				<div id="bloombergHead">Bloomberg</div>
+					<div id="bloomberg"></div>
+				<hr/>
+				<div id="arstechnicaHead">Ars Technica</div>
+					<div id="arstechnica"></div>
+				<hr/>			
+			</div>
 	</div>
 
+	<script id="article-template" type="text/x-handlebars-template">
+		<!-- think of #each as the .forEach interator -->
+		{{#each this}}
+			<h3>{{title}}</h1>
+			<p>{{description}}</p>
+			<a href="{{url}}">Learn more</a>
+		{{/each}}
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="app.js"></script>
 </body>

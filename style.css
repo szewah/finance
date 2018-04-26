@@ -1,10 +1,12 @@
-/*html,
+html,
 body {
   height: 100%;
+  font-weight: normal;
+  font-family: helvetica;
 }
 
 body {
-  display: flex;
+/*  display: flex;*/
   align-items: center;
   justify-content: center;
 }
@@ -14,4 +16,18 @@ body {
   border-radius: 3px;
   padding: 20px;
 }
-*/
+
+#ft {
+	color: white;
+	background: pink;
+}
+
+#cryptonews {
+	color: white;
+	background: lightblue;
+}
+
+#bloomberg {
+	color: white;
+	background: purple;
+}

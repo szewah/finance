@@ -1,0 +1,41 @@
+
+body { 
+  padding: 20px; 
+  width: 100%;
+}
+
+.marquee {
+  background: black;
+  height: 100px;
+/*  width: 100%;*/
+/*  overflow: hidden;*/
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 230%;
+  position: absolute;
+/*  overflow: hidden;*/
+  animation: marquee 35s linear infinite;
+  padding-left: 80px;
+}
+
+.marquee span {
+  margin-top: 20px;
+  color: white;
+/*  float: left;*/
+  display: inline-block;
+  width: 26%;
+  font-family: helvetica;
+  text: align-center;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+h1 {
+  font-family: helvetica;
+}
