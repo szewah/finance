@@ -106,3 +106,18 @@ function handleArsTechNewsResponse(res) {
 	var articlesTemplate = templateGenerator(res.articles)
 	$("#arstechnica").append(articlesTemplate)  
 }
+
+
+// $.ajax({
+//   type: 'GET',
+//   url: 'https://api.coinmarketcap.com/v1/ticker/' + '&apiKey=02e4797226234e7594d8a27122b0f4bc' + '&pageSize=1',
+//   success: handleArsTechNewsResponse,
+// })
+
+
+// function handleCMM(res) {
+//   var src = $('#article-template').html()
+//   var templateGenerator = Handlebars.compile(src)
+//   var articlesTemplate = templateGenerator(res.articles)
+//   $("#arstechnica").append(articlesTemplate)  
+}

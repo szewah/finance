@@ -7,20 +7,21 @@
 <body>
 <h1>News Ticker</h1>
 <div class="marquee">
+	<div class="inner-marquee"></div>
+<!-- 
   <div>
     <span id="newsItem1"></span>
     <span id="newsItem2"></span>
     <span id="newsItem3"></span>
   </div>
 </div>
-
+ -->
 <script id="article-template" type="text/x-handlebars-template">
 		<!-- think of #each as the .forEach interator -->
 		{{#each this}}
-			<h3>{{title}}</h3>
-<!-- 			<p>{{description}}</p>
-			<a href="{{url}}">Learn more</a>
-		{{/each}} -->
+		<span class="article-source">{{source.name}}</span>
+		<a href="{{url}}">{{title}}</a>
+		{{/each}}
 	</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>

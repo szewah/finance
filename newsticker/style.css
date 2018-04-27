@@ -1,34 +1,44 @@
-
 body { 
-  padding: 20px; 
+  padding-top: 20px; 
   width: 100%;
+  margin-left: -3px;
+  margin-right: -3px;
 }
 
 .marquee {
   background: black;
   height: 100px;
-/*  width: 100%;*/
-/*  overflow: hidden;*/
   position: relative;
+
 }
 
 .marquee div {
   display: block;
-  width: 230%;
+/*  width: 230%;*/
   position: absolute;
-/*  overflow: hidden;*/
   animation: marquee 35s linear infinite;
-  padding-left: 80px;
+  padding-left: 70px;
+  margin: 0px;
 }
 
-.marquee span {
-  margin-top: 20px;
+.marquee div:hover {
+  animation-play-state: paused;
+}
+
+.article-source {
   color: white;
-/*  float: left;*/
-  display: inline-block;
-  width: 26%;
+  font-style: italic;
   font-family: helvetica;
-  text: align-center;
+}
+
+.marquee a {
+  padding-top: 45px;
+  color: white;
+  display: inline-block;
+  margin-left: 15px;
+  font-family: helvetica;
+  text-decoration: none;
+  padding-right: 15px;
 }
 
 @keyframes marquee {
@@ -38,4 +48,5 @@ body {
 
 h1 {
   font-family: helvetica;
+  padding-left: 15px;
 }
