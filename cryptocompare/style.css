@@ -1,9 +1,14 @@
+.container {
+	margin-top: 50px;
+}
+
 [v-cloak] {
 	display: none;
 }
 
 h1	{
 	text-align: center;
+	letter-spacing: 1.5px;
 }
 
 td img	{
@@ -11,10 +16,23 @@ td img	{
 }
 
 .jumbotron p {
-	font-size: 1.2em;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 1.5px;
 }
 
 .jumbotron {
-	margin-top: 5em;
-	margin-bottom: 5em;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	padding-top: 25px;
+	padding-bottom: 15px;
+/*	width: 50%;*/
+}
+
+.row {
+	font-size: 20px;
+}
+
+td {
+	font-size: 15px;
 }
