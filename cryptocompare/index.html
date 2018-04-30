@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+
+	<title>Crypto Ticker</title>
+	<!-- Bootstrap link -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- external theme for Boostrap by Bootswatch -->
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="container">
+	<h1>Crypto Compare</h1>
+		<div class="row">
+			<div class="jumbotron col-xs-offset-2 col-xs-8">
+				<p>Top ten crypto currencies by market cap</p>
+			</div>
+		</div>
+
+	<div id="app">
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<td>Rank</td>
+					<td>Name</td>
+					<td>Symbol</td>
+					<td>Price(USD)</td>
+					<td>1H</td>
+					<td>1D</td>
+					<td>1W</td>
+					<td>Market Cap(USD)</td>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- vue -->
+				<tr v-cloak v-for="coin in coins">
+					<td>{{coin.rank}}</td>
+					<td><img v bkind: src="getCoinImage(coin.symbol">{{coin.name}}</td>
+					<td>{{coin.symbol}}</td>
+					<td>{{coin.price_us | currency</td>
+					<td v-bind:style="getColor(coin.percent_change_1h)">
+						<span v-if="coin.percent_change_1h > 0">+</span>{{coin.percent_change_1h}}%
+            		</td>
+            		<td v-bind:style="getColor(coin.percent_change_24h)">
+              			<span v-if="coin.percent_change_24h > 0">+</span>{{coin.percent_change_24h }}%
+            		</td>
+            		<td v-bind:style="getColor(coin.percent_change_7d)">
+              			<span v-if="coin.percent_change_7d > 0">+</span>{{coin.percent_change_7d}}%
+            		</td>
+            		<td>{{coin.market_cap_usd | currency}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="vue2-filters.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
