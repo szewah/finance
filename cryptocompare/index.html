@@ -36,7 +36,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<!-- vue -->
+			
 				<tr v-cloak v-for="coin in coins">
 					<td>{{coin.rank}}</td>					 
 					<td><img v-bind:src="getCoinImage(coin.symbol)"> {{coin.name}}</td>
@@ -59,8 +59,6 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- bootstrap template -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- vue.js -->
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>

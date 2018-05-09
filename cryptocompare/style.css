@@ -2,6 +2,10 @@
 	margin-top: 50px;
 }
 
+/*v-cloak is a attribute that you can add to 
+a element you want to hide, while Vue is mounting.
+https://medium.com/vuejs-tips/v-cloak-45a05da28dc4*/
+
 [v-cloak] {
 	display: none;
 }
