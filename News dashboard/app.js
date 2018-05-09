@@ -120,4 +120,3 @@ function handleArsTechNewsResponse(res) {
 //   var templateGenerator = Handlebars.compile(src)
 //   var articlesTemplate = templateGenerator(res.articles)
 //   $("#arstechnica").append(articlesTemplate)  
-}

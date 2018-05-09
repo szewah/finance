@@ -46,7 +46,7 @@
 						<span v-if="coin.percent_change_1h > 0">+</span>{{coin.percent_change_1h}}%
             		</td>
             		<td v-bind:style="getColor(coin.percent_change_24h)">
-              			<span v-if="coin.percent_change_24h > 0">+</span>{{coin.percent_change_24h }}%
+              			<span v-if="coin.percent_change_24h > 0">+</span>{{coin.percent_change_24h}}%
             		</td>
             		<td v-bind:style="getColor(coin.percent_change_7d)">
               			<span v-if="coin.percent_change_7d > 0">+</span>{{coin.percent_change_7d}}%
@@ -62,8 +62,8 @@
     <!-- bootstrap template -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- vue.js -->
-    <script src="https://unpkg.com/vue"></script>
-    <script src="vue2-filters.min.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
     <!-- Axios is a promise-based HTTP client that works both in the browser and in a node.js environment. It provides a single API for dealing with XMLHttpRequests and node's http interface. -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
