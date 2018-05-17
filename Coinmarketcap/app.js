@@ -10,7 +10,7 @@ let newApp = new Vue ({
 
 	methods: { 
 
-		getCoinData: function () {
+		getCoins: function () {
 		axios
 			.get(coinMarket +'/v2/ticker/?limit=10')
   			.then((resp) => {
@@ -27,12 +27,12 @@ let newApp = new Vue ({
     },
 
     created: function () {
-    	this.getCoinData();
+    	this.getCoins();
   	}
 })
 
 setInterval(() => {
-  	app.getCoins();
+  	newApp.getCoins();
 }, 
   	updateInterval
 );
