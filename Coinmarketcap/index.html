@@ -30,11 +30,11 @@
 					<td>{{coin.rank}}</td>
 					<td>{{coin.name}}</td>
 					<td>{{coin.symbol}}</td>
-					<td>${{coin.price | currency}}</td>
-					<td>${{coin.market_cap | currency}}</td>
+					<td>${{coin.quotes.USD.price}}</td>
+					<td>${{coin.quotes.USD.market_cap}}</td>
 					<td>
-						<span v-if="coin.percent_change_24h>0">+</span>
-						{{coin.percent_change_24h}}%
+						<span v-if="coin.quotes.USD.percent_change_24h>0">+</span>
+						{{coin.quotes.USD.percent_change_24h}}%
 					</td>		
 				</tr>
 			</tbody>

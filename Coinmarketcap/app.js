@@ -14,7 +14,7 @@ let newApp = new Vue ({
 		axios
 			.get(coinMarket +'/v2/ticker/?limit=10')
   			.then((resp) => {
-				this.results = resp.data
+				this.results = resp.data.data
     			// console.log(resp.data); 
     			// console.log(resp.status); 
   				}); 
