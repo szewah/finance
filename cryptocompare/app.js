@@ -4,8 +4,8 @@ let cryptoCompare_URI = "https://www.cryptocompare.com";
 let coinMarketCap_API = "https://api.coinmarketcap.com";
 							
 let updateInterval = 60 * 1000;
-
-let app = new Vue ({
+// new Vue is a constructor
+let app = new Vue ({ 
 	el: "#app",
 	data: {
 		// array of currencies
@@ -17,11 +17,13 @@ let app = new Vue ({
 	methods: {
 
 	getCoinData: function() {
-		let self = this;
-		axios
-			.get(cryptoCompare_API + "/data/all/coinlist")
+		axios 
+			.get(cryptoCompare_API + "/data/all/coinlist") // new-ish technique to deal with asynchronous requests
+
 			.then((resp) => {
-				this.coinData = resp.data.Data;
+// in this instance call #app (new Vue constructor) find the coin data and set it equal to resp.data.Data
+			// this.data.coinData
+				this.coinData = resp.data.Data; 
 // need to call the getCoins method many times to keep the data up-to-date, 
 // and we should only call it once the metadata about all coins has already been loaded.
 				this.getCoins();
@@ -33,9 +35,8 @@ let app = new Vue ({
 		},
 
 	getCoins: function() {
-		let self = this;
 		axios
-			.get(coinMarketCap_API + "/v2/ticker/?limit=10")
+			.get(coinMarketCap_API + "/v1/ticker/?limit=10")
 			.then((resp) => {
 				this.coins = resp.data;
 			})
@@ -45,7 +46,8 @@ let app = new Vue ({
 		},
 
 	getCoinImage: function(symbol) {
-		symbol = (symbol === "MIOTA" ? "IOT": symbol);
+		//using debugger statement you can put in console.log(this) to see what data there is
+		symbol = (symbol === "MIOTA" ? "IOT": symbol); //ternary statement = if else
 		symbol = (symbol === "VERI" ? "VRM" : symbol);
 // This code takes care of the cross-referencing between both API services, and allows us to easily retrieve a cryptocurrency’s image.
 		return cryptoCompare_URI + this.coinData[symbol].ImageUrl;

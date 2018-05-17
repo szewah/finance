@@ -36,7 +36,8 @@
 				</tr>
 			</thead>
 			<tbody>
-			
+			<!-- behind the scenes: iterate an array and add another row -->
+			<!-- coin is an alias and coins (see app.js data property) is the element that is interated on as the program loops through it. Coin, the alias is used in the expression below to print out each string as each one is looped through. -->
 				<tr v-cloak v-for="coin in coins">
 					<td>{{coin.rank}}</td>					 
 					<td><img v-bind:src="getCoinImage(coin.symbol)"> {{coin.name}}</td>
@@ -58,10 +59,10 @@
 	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- vue.js -->
     <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
     <!-- Axios is a promise-based HTTP client that works both in the browser and in a node.js environment. It provides a single API for dealing with XMLHttpRequests and node's http interface. -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>

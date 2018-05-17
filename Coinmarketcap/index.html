@@ -10,32 +10,30 @@
 </head>
 <body class="container">
 	<h1>Crypto Currencies</h1>
-	<div id="app">
-		<table class="table">
-			<thead>
-				<tr>
-					<td>Rank</td>
-					<td>Name</td>
-					<td>Symbol</td>
-					<td>Price(USD)</td>
-					<td>Change</td>
-					<td>M.Cap</td>
-					<td>Supply</td>
-					<td>Volume</td>
-					<td>Price Graph</td>
-				</tr>
-			</thead>
+	<div id="coinApp">
+		<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Rank</th>
+						<th>Name</th>
+						<th>Symbol</th>
+						<th>Price(USD)</th>
+						<th>Market Cap</th>
+						<th>Change(24h)</th>	
+					</tr>
+				</thead>
 			<tbody>
-				<tr v-cloak v-for="coin in table">
+				<tr v-cloak v-for="coin in results">
+		<!-- Coin is the alias we are iterating
+			 Results refers to data.results in the vue instance. 
+			 Use the same alias in the below expression to print out each string as we look through them -->
 					<td>{{coin.rank}}</td>
 					<td>{{coin.name}}</td>
 					<td>{{coin.symbol}}</td>
-					<td>{{coin.price_usd}}</td>
-					<td>{{coin.change}}</td>
-					<td>{{coin.market_cap_usd}}</td>
-					<td>{{coin.supply}}</td>
-					<td>{{coin.volume</td>
-					<td>{{coin.pricegraph}}</td>
+					<td>{{coin.price}}</td>
+					<td>{{coin.market_cap}}</td>
+					<td>{{coin.percent_change_24h}}%
+					</td>		
 				</tr>
 			</tbody>
 		</table>
