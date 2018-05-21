@@ -17,7 +17,7 @@
 						<th>Rank</th>
 						<th>Name</th>
 						<th>Symbol</th>
-						<th>Price(USD)</th>
+						<th>Price</th>
 						<th>Market Cap</th>
 						<th>Change(24h)</th>	
 					</tr>
@@ -30,9 +30,9 @@
 					<td>{{coin.rank}}</td>
 					<td>{{coin.name}}</td>
 					<td>{{coin.symbol}}</td>
-					<td>${{coin.quotes.USD.price}}</td>
-					<td>${{coin.quotes.USD.market_cap}}</td>
-					<td>
+					<td>{{coin.quotes.USD.price | currency}}</td>
+					<td>{{coin.quotes.USD.market_cap | currency('$', 0, { thousandsSeparator: ',' }) }}</td>
+					<td v-bind:style="getColor(coin.quotes.USD.percent_change_24h)" > 
 						<span v-if="coin.quotes.USD.percent_change_24h>0">+</span>
 						{{coin.quotes.USD.percent_change_24h}}%
 					</td>		
