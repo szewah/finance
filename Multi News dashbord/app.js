@@ -1,19 +1,4 @@
-// // 1. grab template from HTML
-// var src = $('#article-template').html()
-// // 2. compile HTML-based template into Handlebars template
-// var template = Handlebars.compile(src)
-
-// var personTemplate  = template({
-//   author: 'chandler',
-//   title: 'intro to js',
-// })
-
-// console.log(src)
-// console.log(personTemplate)
-
-
-
- $.ajax({
+$.ajax({
   type: 'GET',
   url: 'https://newsapi.org/v2/top-headlines?' + 'sources=financial-times&' + 'apiKey=02e4797226234e7594d8a27122b0f4bc',
   success: handleFtNewsResponse,

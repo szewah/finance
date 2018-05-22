@@ -1,0 +1,13 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+td {
+  font-size: 15px;
+  margin:10px;
+}

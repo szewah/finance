@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Key Headlines</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="container">
+		<h1>Key Headlines</h1>
+		<div id="newsHeadLinesApp"></div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Publication</th>
+					<th>Date</th>
+					<th>Title</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-cloak v-for="news in results">
+					<td>{{news.articles.name}}</td>
+					<td>{{news.articles.publishedAt}}</td>
+					<td>{{news.articles.title}}</td>
+					<td>{{news.articles.description}}</td>
+				</tr>
+			</tbody>
+		</table>
+<!-- 				<div id="ftHead">FT</div>
+					<div id="ft"></div>
+				<hr/>
+				<div id="cryptonewsHead">Crypto News</div>
+					<div id="cryptonews"></div>
+				<hr/>
+				<div id="bizinsiderHead">Business Insider</div>
+					<div id="bizinsider"></div>
+				<hr/>
+				<div id="bloombergHead">Bloomberg</div>
+					<div id="bloomberg"></div>
+				<hr/>
+				<div id="arstechnicaHead">Ars Technica</div>
+					<div id="arstechnica"></div>
+				<hr/>			
+			</div>
+	</div>
+ -->
+<!-- 	<script id="article-template" type="text/x-handlebars-template">
+		{{#each this}}
+			<h3>{{title}}</h1>
+			<p>{{description}}</p>
+			<a href="{{url}}">Learn more</a>
+			<img src="{{urlToImage}}">
+		{{/each}}
+	</script> -->
+
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
