@@ -1,11 +1,14 @@
+// Vue.config.productionTip = false
 let coinMarket = 'https://api.coinmarketcap.com/v2/ticker/?limit=10'
 let updateInterval = 60 * 1000;
+
+
 
 let newApp = new Vue({
     el: '#coinApp',
     data: {
-        // data within objects
-        results: []
+        // data within an array
+        results: {}
     },
 
     methods: {
@@ -16,7 +19,6 @@ let newApp = new Vue({
                 .then((resp) => {
                     // this.results = resp.data.data
                     this.results = formatCoins(resp);
-                    debugger
                 });
         },
 
@@ -37,14 +39,15 @@ setInterval(() => {
     updateInterval
 );
 
-function formatCoins(response) {
+
+function formatCoins(res) {
     var coinDataArray = []
-    Object.keys(response.data).forEach(function(key) {
-        coinDataArray.push(response.data[key])
+    Object.keys(res.data.data).forEach(function(key) {
+        coinDataArray.push(res.data.data[key])
     })
-    coinDataArray.sort(function(a, b) {
-        return a.rank > b.rank;
+    coinDataArray.sort(function(a,b) {
+        return a.rank - b.rank
     })
     console.log(coinDataArray)
-    debugger
+    return coinDataArray
 }
