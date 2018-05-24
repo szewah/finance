@@ -1,13 +1,32 @@
-body, html {
-  height: 100%;
-  width: 100%;
+.container {
+	width: 100%;
 }
 
 [v-cloak] {
   display: none;
-}
+},
 
 td {
-  font-size: 15px;
-  margin:10px;
+  font-size: 11px;
+}
+
+#smallRow {
+	width: 15%;
+}
+
+#mediumRow {
+	width: 35%;
+}
+
+
+#largeRow {
+	width: 50%;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+h3{
+	
 }

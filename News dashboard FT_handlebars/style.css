@@ -1,0 +1,25 @@
+.container {
+	width: 100%;
+}
+
+
+td {
+  font-size: 13px;
+}
+
+#slimRow {
+	width: 15%;
+
+}
+
+#mediumRow {
+	width: 30%;
+}
+
+#largeRow {
+	width: 55%;
+
+}
+
+
+

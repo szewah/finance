@@ -8,31 +8,34 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="container">
-		<h3>Key Headlines</h2>
-		<div id="newsHeadLinesApp">
-		<table class="table table-bordered table table-hover">
-			<thead class="thead-dark">
-				<tr>
-					<th id="smallRow">Publication</th>
-					<th id="mediumRow">Title</th>
-					<th id="largeRow">Description</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-cloak v-for="news in results">
-					<td>{{news.source.name}}</td>
-					<td>{{news.title}}</td>
-					<td>{{news.description}}</td>
-				</tr>
-			</tbody>
-		</table>
+	<h2>Key Headlines</h2>
+		<div id="newsHeadLinesApp">	
+			<script id="some_template" type="text/x-handlebars-template">		
+				<table class="table table-bordered table table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th>Publication</th>
+							<th>Title</th> 
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						{{#each this}}
+							<tr>
+								<td id="slimRow">{{source.name}}</td>
+								<td id="mediumRow">{{title}}</td>
+								<td id="largeRow">{{description}}</td>
+							</tr>
+						{{/each}}
+					</tbody>
+				</table>
+			</script>
 		</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>

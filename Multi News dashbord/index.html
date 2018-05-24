@@ -10,30 +10,26 @@
 	<div class="container">
 		<h1>The Big Picture</h1>
 			<div>
-				<div id="ftHead">FT</div>
-					<div id="ft"></div>
+				<div id="ft"></div>
 				<hr/>
-				<div id="cryptonewsHead">Crypto News</div>
-					<div id="cryptonews"></div>
+				<div id="cryptonews"></div>
 				<hr/>
-				<div id="bizinsiderHead">Business Insider</div>
-					<div id="bizinsider"></div>
+				<div id="bizinsider"></div>
 				<hr/>
-				<div id="bloombergHead">Bloomberg</div>
-					<div id="bloomberg"></div>
+				<div id="bloomberg"></div>
 				<hr/>
-				<div id="arstechnicaHead">Ars Technica</div>
-					<div id="arstechnica"></div>
+				<div id="arstechnica"></div>
 				<hr/>			
 			</div>
 	</div>
 
 	<script id="article-template" type="text/x-handlebars-template">
 		{{#each this}}
+			<h3>{{source.name}}</h3>
 			<h3>{{title}}</h1>
 			<p>{{description}}</p>
 			<a href="{{url}}">Learn more</a>
-			<img src="{{urlToImage}}">
+<!-- 			<img src="{{urlToImage}}"> -->
 		{{/each}}
 	</script>
 
