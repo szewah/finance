@@ -1,4 +1,4 @@
-**Template by @jxson**
+**Template by jxson**
 
 ## Synopsis
 
