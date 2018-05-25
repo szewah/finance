@@ -1,6 +1,6 @@
 # finance_project
 
-Technologies: 
+Built With: 
 HTML
 CSS
 Javascript
