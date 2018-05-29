@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-An app that pulls together the headlines from your trusted financial news sources.
+A web app that pulls together the headlines from your trusted financial news sources.
 
 ## Installation
 
