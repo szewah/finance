@@ -8,10 +8,6 @@ A web app that pulls together the headlines from your trusted financial news sou
 
 Vue.js, Bootstrap
 
-## Installation
-
-Provide code examples and explanations of how to get the project.
-
 ## API Reference
 
 https://newsapi.org/docs
