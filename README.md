@@ -12,10 +12,3 @@ Provide code examples and explanations of how to get the project.
 
 https://newsapi.org/docs
 
-## Contributors
-
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
-
-A short snippet describing the license (MIT, Apache, etc.)
